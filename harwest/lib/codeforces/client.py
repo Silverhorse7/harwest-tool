@@ -61,12 +61,10 @@ class CodeforcesClient:
                 continue
             if 'contestId' not in row.keys():
                 continue
-            if row['testset'] != "TESTS":
-                continue
+          """  if row['testset'] != "TESTS":
+               continue"""
 
             contest_id = row['contestId']
-            if contest_id > 100000: continue  # Ignore gym submissions
-
             status = row['verdict']
             if status != "OK": continue  # Only process accepted solutions
 
